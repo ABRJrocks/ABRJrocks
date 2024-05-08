@@ -1,4 +1,4 @@
-<h2 align="left">Hi 👋! My name is Abdul Rafay...<br>Full-Stack Developer | React | LLMs | AI Enthusiast | Python | BSCS Student | Tech Advocate</h2>
+<h2 align="left">Hi 👋! My name is Abdul Rafay...<br>Full-Stack Developer | React | LLMs | AI Enthusiast | Python </h2>
 
 ###
 
