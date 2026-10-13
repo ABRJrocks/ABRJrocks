@@ -97,7 +97,7 @@ jobs:
           def svg(height, title, parts):
               return f'<svg xmlns="http://www.w3.org/2000/svg" width="960" height="{height}" viewBox="0 0 960 {height}" role="img" aria-labelledby="title"><title id="title">{escape(title)}</title>' + ''.join(parts) + '</svg>'
           
-          INK, PANEL, WHITE, MUTED, ACCENT, LINE = '#171918', '#232624', '#f3f0e8', '#b2b8b1', '#e4bd77', '#3a403a'
+          INK, PANEL, WHITE, MUTED, ACCENT, LINE = '#f6f8fa', '#eaf0f6', '#172b4d', '#526078', '#2358a8', '#d1d9e0'
 
           def line(x1, y1, x2, y2, color=LINE):
               return f'<path d="M{x1} {y1}H{x2}" stroke="{color}"/>' if y1 == y2 else f'<path d="M{x1} {y1}L{x2} {y2}" stroke="{color}"/>'
@@ -132,14 +132,14 @@ jobs:
                     text(346, 182, f'{user["followers"]} GitHub followers', 14, WHITE, 600),
                     text(663, 182, f'Building on GitHub since {stats["github_since"]}', 14, WHITE, 600),
                     text(32, 223, 'A YEAR OF BUILDING', 11, ACCENT, 700)]
-          levels = {'NONE': '#303530', 'FIRST_QUARTILE': '#5e563e', 'SECOND_QUARTILE': '#97804e', 'THIRD_QUARTILE': '#c29e60', 'FOURTH_QUARTILE': ACCENT}
+          levels = {'NONE': '#e3e8ee', 'FIRST_QUARTILE': '#c9d9ea', 'SECOND_QUARTILE': '#93b3d5', 'THIRD_QUARTILE': '#5682b6', 'FOURTH_QUARTILE': ACCENT}
           for week_index, week in enumerate(calendar['weeks']):
               for day_index, day in enumerate(week['contributionDays']):
                   weekday = (datetime.strptime(day['date'], '%Y-%m-%d').weekday() + 1) % 7
                   x, y = 32 + week_index * 16.5, 240 + weekday * 15
                   parts += [f'<g><title>{day["date"]}: {day["contributionCount"]} contributions</title>', rect(x, y, 13, 12, levels[day['contributionLevel']], 2), '</g>']
           parts += [text(32, 371, 'PRIMARY LANGUAGE MIX / ORIGINAL PUBLIC REPOSITORIES', 11, ACCENT, 700)]
-          colors = ['#e4bd77', '#8eada5', '#b9a0c4', '#b7c78c', '#cf9685', '#89a9bc', '#c7c0aa', '#a3a9a1']
+          colors = ['#1f4b82', '#426d9b', '#668aad', '#88a4bf', '#a8bdcf', '#cad7e2', '#536879', '#7c8e9c']
           offset = 32
           total = sum(languages.values())
           for index, (language, count) in enumerate(languages.most_common()):
@@ -159,7 +159,7 @@ jobs:
                       p += [rect(43+index*8, 137-height/2, 4, height, ACCENT, 2)]
                   p += [line(216, 137, 240, 137, ACCENT), text(254, 131, 'VOICE TO TEXT', 11, WHITE, 700), text(254, 152, 'On your Mac', 12, MUTED)]
               elif number == '02':
-                  p += ['<path d="M62 159V129Q62 122 69 124L78 131V111Q78 103 85 108L94 124V106Q94 99 101 103L111 126V116Q111 108 118 114L130 139Q136 159 119 164H79Z" fill="none" stroke="#e4bd77" stroke-width="2" stroke-linejoin="round"/>',
+                  p += ['<path d="M62 159V129Q62 122 69 124L78 131V111Q78 103 85 108L94 124V106Q94 99 101 103L111 126V116Q111 108 118 114L130 139Q136 159 119 164H79Z" fill="none" stroke="#2358a8" stroke-width="2" stroke-linejoin="round"/>',
                         line(159, 137, 197, 137, ACCENT), text(219, 130, 'VISION TO CONTROL', 11, WHITE, 700), text(219, 152, 'Native macOS gestures', 12, MUTED)]
               else:
                   for index, label in enumerate(diagram):
