@@ -1,14 +1,76 @@
-<h1 align="center">Hi 👋, I'm Abdul Rafay</h1>
-<h3 align="center">Full-Stack Developer | React | LLMs | AI Enthusiast | Python</h3>
+![Abdul Rafay — AI engineering, product and architecture](https://raw.githubusercontent.com/ABRJrocks/ABRJrocks/main/assets/profile-header.svg)
 
-- 📫 How to reach me **abdul.rafay@deventities.com**
-
-- ⚡ Fun fact **I started developing apps when I was 14.**
-
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://linkedin.com/in/abdul-rafay380" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="abdul-rafay380" height="30" width="40" /></a>
+<p align="center">
+  <a href="https://www.rafayai.dev"><b>Portfolio & case studies</b></a> &nbsp; / &nbsp;
+  <a href="https://www.linkedin.com/in/abdul-rafay380/"><b>LinkedIn</b></a> &nbsp; / &nbsp;
+  <a href="mailto:abdul.rafay@deventities.com"><b>Let's build together</b></a>
 </p>
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://developer.android.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original-wordmark.svg" alt="android" width="40" height="40"/> </a> <a href="https://aws.amazon.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="40" height="40"/> </a> <a href="https://azure.microsoft.com/en-in/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg" alt="azure" width="40" height="40"/> </a> <a href="https://getbootstrap.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40"/> </a> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://www.djangoproject.com/" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/django.svg" alt="django" width="40" height="40"/> </a> <a href="https://www.docker.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="40" height="40"/> </a> <a href="https://expressjs.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="express" width="40" height="40"/> </a> <a href="https://www.figma.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"/> </a> <a href="https://firebase.google.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="40" height="40"/> </a> <a href="https://flask.palletsprojects.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-icon.svg" alt="flask" width="40" height="40"/> </a> <a href="https://flutter.dev" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/flutterio/flutterio-icon.svg" alt="flutter" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://www.adobe.com/in/products/illustrator.html" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/adobe_illustrator/adobe_illustrator-icon.svg" alt="illustrator" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://www.linux.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> </a> <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://www.nginx.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nginx/nginx-original.svg" alt="nginx" width="40" height="40"/> </a> <a href="https://nodejs.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> <a href="https://opencv.org/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/opencv/opencv-icon.svg" alt="opencv" width="40" height="40"/> </a> <a href="https://pandas.pydata.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/pandas/pandas-original.svg" alt="pandas" width="40" height="40"/> </a> <a href="https://www.php.net" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="php" width="40" height="40"/> </a> <a href="https://www.postgresql.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="40" height="40"/> </a> <a href="https://postman.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> <a href="https://pytorch.org/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="pytorch" width="40" height="40"/> </a> <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> <a href="https://reactnative.dev/" target="_blank" rel="noreferrer"> <img src="https://reactnative.dev/img/header_logo.svg" alt="reactnative" width="40" height="40"/> </a> <a href="https://scikit-learn.org/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="scikit_learn" width="40" height="40"/> </a> <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="tailwind" width="40" height="40"/> </a> <a href="https://www.tensorflow.org" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="tensorflow" width="40" height="40"/> </a> <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/> </a> <a href="https://www.adobe.com/products/xd.html" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/adobe-xd.svg" alt="xd" width="40" height="40"/> </a> <a href="https://zapier.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/zapier/zapier-icon.svg" alt="zapier" width="40" height="40"/> </a> </p>
+### From an ambiguous problem to a product people can use.
+
+I lead **AI & Technology Solutions at Dev Entities**, combining solution architecture with hands-on engineering. I build AI agents, retrieval systems, voice assistants, and full-stack products—and take them through APIs, interfaces, deployment, and iteration.
+
+My focus is practical: grounded answers, clear system boundaries, human review where it matters, and reliable fallbacks. I work with founders and engineering teams across **AI, web, mobile, SaaS, and automation**.
+
+## Engineering in public
+
+![Daily GitHub metrics: original public repositories, contributions, stars, forks, followers, languages, and contribution heatmap](https://raw.githubusercontent.com/ABRJrocks/ABRJrocks/main/assets/github-metrics.svg)
+
+<sub>Refreshed daily from GitHub. Repository, star, and fork counts cover original public repositories; client and private work are represented in the case studies below. Language counts describe repositories, not proficiency. [View the data](https://github.com/ABRJrocks/ABRJrocks/blob/main/assets/github-metrics.json) · [Refresh workflow](https://github.com/ABRJrocks/ABRJrocks/actions/workflows/profile-metrics.yml)</sub>
+
+## Selected work
+
+<table>
+<tr>
+<td width="50%" valign="top">
+<h3>FlowLocal</h3>
+<p>Local-first voice dictation for macOS. Push-to-talk anywhere, three local speech-recognition engines, and on-device LLM cleanup.</p>
+<p><b>Swift · Speech AI · On-device processing</b></p>
+<a href="https://github.com/ABRJrocks/Whisper-Flow-Local">Explore the repository →</a>
+</td>
+<td width="50%" valign="top">
+<h3>Hand Control</h3>
+<p>Native macOS hand-gesture control using Apple Vision, AVFoundation, and Accessibility APIs.</p>
+<p><b>Swift · Computer vision · macOS</b></p>
+<a href="https://github.com/ABRJrocks/hand-control">Explore the repository →</a>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<h3>ByrdDog / Procurement AI</h3>
+<p>Built AI workflow components for supplier-email classification, structured extraction, RFQ generation, reply matching, and downstream automation.</p>
+<p><b>AI workflows · Data extraction · Business systems</b></p>
+<a href="https://www.rafayai.dev/#ov-projects">View selected client work →</a>
+</td>
+<td width="50%" valign="top">
+<h3>Customer Support / RAG</h3>
+<p>Delivered live-data retrieval and grounded customer-support experiences across WhatsApp and web, with FastAPI services and a React frontend.</p>
+<p><b>Python · FastAPI · React · RAG</b></p>
+<a href="https://www.rafayai.dev/#ov-projects">View selected client work →</a>
+</td>
+</tr>
+</table>
+
+**More things I build:** [DevicesBattery](https://github.com/ABRJrocks/DevicesBattery), a macOS menu-bar app for Mac, AirPods, and iPhone battery levels; multimodal fashion assistants combining text, voice, and image input; real-time voice and receptionist workflows.
+
+## The tools behind the work
+
+| Area | Technologies & approach |
+| :--- | :--- |
+| **AI systems** | AI agents, RAG, LangGraph, LangChain, LLM orchestration, multimodal and voice AI |
+| **Backend & data** | Python, FastAPI, Django, Node.js, PostgreSQL, data ingestion and ETL |
+| **Product interfaces** | React, Next.js, TypeScript, React Native, Tailwind CSS |
+| **Native applications** | Swift, Apple Vision, AVFoundation, macOS Accessibility APIs |
+| **Delivery & leadership** | Docker, Linux, solution architecture, technical discovery, code reviews, developer mentoring |
+
+## Architecture. Ownership. Delivery.
+
+At Dev Entities, I progressed from **Full-Stack AI Engineer → Lead AI Engineer → Head of AI & Technology Solutions**. I stay close to the code while shaping technical direction, reviewing implementations, mentoring developers, and aligning delivery with business goals.
+
+Before that, I worked with React and Django at Echo Technologies and taught development, programming fundamentals, and data structures at Riphah International University. I started building apps at **14**—and still enjoy turning a rough idea into something useful.
+
+---
+
+**Have an AI product or workflow to build?** I’m open to engineering leadership roles and consulting across AI agents, RAG, voice AI, and full-stack product delivery.
+
+[Explore my portfolio](https://www.rafayai.dev) · [Connect on LinkedIn](https://www.linkedin.com/in/abdul-rafay380/) · [Email me](mailto:abdul.rafay@deventities.com)
