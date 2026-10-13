@@ -1,4 +1,4 @@
-![Abdul Rafay, Head of AI & Technology Solutions at Dev Entities. Engineering useful AI.](https://raw.githubusercontent.com/ABRJrocks/ABRJrocks/main/assets/profile-header.svg?v=3)
+![Abdul Rafay, Head of AI & Technology Solutions at Dev Entities. Engineering useful AI.](https://raw.githubusercontent.com/ABRJrocks/ABRJrocks/main/assets/profile-header.svg?v=4)
 
 <p align="center">
 <a href="https://www.rafayai.dev"><b>Portfolio & case studies ↗</b></a> &nbsp; · &nbsp;
@@ -15,21 +15,21 @@ A selection of public products and client engineering. Open-source repositories 
 <table>
 <tr>
 <td width="50%" valign="top">
-<a href="https://github.com/ABRJrocks/Whisper-Flow-Local"><img width="100%" src="https://raw.githubusercontent.com/ABRJrocks/ABRJrocks/main/assets/project-flowlocal.svg?v=3" alt="FlowLocal: local voice dictation for macOS with three ASR engines and on-device LLM cleanup." /></a>
+<a href="https://github.com/ABRJrocks/Whisper-Flow-Local"><img width="100%" src="https://raw.githubusercontent.com/ABRJrocks/ABRJrocks/main/assets/project-flowlocal.svg?v=4" alt="FlowLocal: local voice dictation for macOS with three ASR engines and on-device LLM cleanup." /></a>
 <p><a href="https://github.com/ABRJrocks/Whisper-Flow-Local"><b>Explore FlowLocal →</b></a> &nbsp; <sub>Public repository</sub></p>
 </td>
 <td width="50%" valign="top">
-<a href="https://github.com/ABRJrocks/hand-control"><img width="100%" src="https://raw.githubusercontent.com/ABRJrocks/ABRJrocks/main/assets/project-hand-control.svg?v=3" alt="Hand Control: native macOS hand gestures using Apple Vision, AVFoundation, and accessibility." /></a>
+<a href="https://github.com/ABRJrocks/hand-control"><img width="100%" src="https://raw.githubusercontent.com/ABRJrocks/ABRJrocks/main/assets/project-hand-control.svg?v=4" alt="Hand Control: native macOS hand gestures using Apple Vision, AVFoundation, and accessibility." /></a>
 <p><a href="https://github.com/ABRJrocks/hand-control"><b>Explore Hand Control →</b></a> &nbsp; <sub>Public repository</sub></p>
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-<a href="https://www.rafayai.dev/#ov-projects"><img width="100%" src="https://raw.githubusercontent.com/ABRJrocks/ABRJrocks/main/assets/project-byrddog.svg?v=3" alt="ByrdDog: AI components for supplier email classification, structured extraction, RFQ generation, and reply matching." /></a>
+<a href="https://www.rafayai.dev/#ov-projects"><img width="100%" src="https://raw.githubusercontent.com/ABRJrocks/ABRJrocks/main/assets/project-byrddog.svg?v=4" alt="ByrdDog: AI components for supplier email classification, structured extraction, RFQ generation, and reply matching." /></a>
 <p><a href="https://www.rafayai.dev/#ov-projects"><b>View client engineering →</b></a> &nbsp; <sub>ByrdDog</sub></p>
 </td>
 <td width="50%" valign="top">
-<a href="https://www.rafayai.dev/#ov-projects"><img width="100%" src="https://raw.githubusercontent.com/ABRJrocks/ABRJrocks/main/assets/project-rag.svg?v=3" alt="Customer Support AI: live-data RAG across WhatsApp and web, with FastAPI and React." /></a>
+<a href="https://www.rafayai.dev/#ov-projects"><img width="100%" src="https://raw.githubusercontent.com/ABRJrocks/ABRJrocks/main/assets/project-rag.svg?v=4" alt="Customer Support AI: live-data RAG across WhatsApp and web, with FastAPI and React." /></a>
 <p><a href="https://www.rafayai.dev/#ov-projects"><b>View client engineering →</b></a> &nbsp; <sub>Customer support</sub></p>
 </td>
 </tr>
@@ -39,13 +39,13 @@ A selection of public products and client engineering. Open-source repositories 
 
 ## Engineering in public
 
-![Daily engineering dashboard: original public repositories, contributions, active days, followers, contribution calendar, and primary language distribution.](https://raw.githubusercontent.com/ABRJrocks/ABRJrocks/main/assets/github-metrics.svg?v=3)
+![Daily engineering dashboard: original public repositories, contributions, active days, followers, contribution calendar, and primary language distribution.](https://raw.githubusercontent.com/ABRJrocks/ABRJrocks/main/assets/github-metrics.svg?v=4)
 
 <sub>Updated daily from GitHub. Repository counts exclude forks and private work. Language mix measures repositories, not proficiency. [Inspect the data](https://github.com/ABRJrocks/ABRJrocks/blob/main/assets/github-metrics.json) · [View the refresh workflow](https://github.com/ABRJrocks/ABRJrocks/actions/workflows/profile-metrics.yml)</sub>
 
 ## From discovery to delivery
 
-![How I take ownership: understand business goals, architect systems, build the product, and deliver through deployment and iteration.](https://raw.githubusercontent.com/ABRJrocks/ABRJrocks/main/assets/delivery-map.svg?v=3)
+![How I take ownership: understand business goals, architect systems, build the product, and deliver through deployment and iteration.](https://raw.githubusercontent.com/ABRJrocks/ABRJrocks/main/assets/delivery-map.svg?v=4)
 
 I work with founders, clients, and engineering teams on technical discovery, architecture, scope, roadmaps, and implementation. I stay close to code, review systems, mentor developers, and plan delivery. My engineering priorities are **grounded answers, clear system boundaries, reliable fallbacks, and human review where it matters**.
 
