@@ -1,76 +1,72 @@
-![Abdul Rafay | AI engineering, product and architecture](https://raw.githubusercontent.com/ABRJrocks/ABRJrocks/main/assets/profile-header.svg?v=2)
+![Abdul Rafay, Head of AI & Technology Solutions at Dev Entities. Engineering useful AI.](https://raw.githubusercontent.com/ABRJrocks/ABRJrocks/main/assets/profile-header.svg?v=3)
 
 <p align="center">
-  <a href="https://www.rafayai.dev"><b>Portfolio & case studies</b></a> &nbsp; / &nbsp;
-  <a href="https://www.linkedin.com/in/abdul-rafay380/"><b>LinkedIn</b></a> &nbsp; / &nbsp;
-  <a href="mailto:abdul.rafay@deventities.com"><b>Let's build together</b></a>
+<a href="https://www.rafayai.dev"><b>Portfolio & case studies ↗</b></a> &nbsp; · &nbsp;
+<a href="https://www.linkedin.com/in/abdul-rafay380/"><b>LinkedIn ↗</b></a> &nbsp; · &nbsp;
+<a href="mailto:abdul.rafay@deventities.com"><b>Start a conversation ↗</b></a>
 </p>
 
-### From an ambiguous problem to a product people can use.
-
-I lead **AI & Technology Solutions at Dev Entities**, combining solution architecture with hands-on engineering. I build AI agents, retrieval systems, voice assistants, and full-stack products. I take them through APIs, interfaces, deployment, and iteration.
-
-My focus is practical: grounded answers, clear system boundaries, human review where it matters, and reliable fallbacks. I work with founders and engineering teams across **AI, web, mobile, SaaS, and automation**.
-
-## Engineering in public
-
-![Daily GitHub metrics: original public repositories, contributions, active days, followers, languages, and contribution heatmap](https://raw.githubusercontent.com/ABRJrocks/ABRJrocks/main/assets/github-metrics.svg?v=2)
-
-<sub>Refreshed daily from GitHub. Repository, star, and fork counts cover original public repositories; client and private work are represented in the case studies below. Language counts describe repositories, not proficiency. [View the data](https://github.com/ABRJrocks/ABRJrocks/blob/main/assets/github-metrics.json) · [Refresh workflow](https://github.com/ABRJrocks/ABRJrocks/actions/workflows/profile-metrics.yml)</sub>
+I lead **AI & Technology Solutions at Dev Entities**, pairing technical direction with hands-on product engineering. My work connects **AI agents, retrieval systems, and voice experiences** with the APIs, interfaces, and infrastructure that make them useful in production.
 
 ## Selected work
+
+A selection of public products and client engineering. Open-source repositories include the implementation; client projects link to my portfolio.
 
 <table>
 <tr>
 <td width="50%" valign="top">
-<h3>FlowLocal</h3>
-<p>Local-first voice dictation for macOS. Push-to-talk anywhere, three local speech-recognition engines, and on-device LLM cleanup.</p>
-<p><b>Swift · Speech AI · On-device processing</b></p>
-<a href="https://github.com/ABRJrocks/Whisper-Flow-Local">Explore the repository →</a>
+<a href="https://github.com/ABRJrocks/Whisper-Flow-Local"><img width="100%" src="https://raw.githubusercontent.com/ABRJrocks/ABRJrocks/main/assets/project-flowlocal.svg?v=3" alt="FlowLocal: local voice dictation for macOS with three ASR engines and on-device LLM cleanup." /></a>
+<p><a href="https://github.com/ABRJrocks/Whisper-Flow-Local"><b>Explore FlowLocal →</b></a> &nbsp; <sub>Public repository</sub></p>
 </td>
 <td width="50%" valign="top">
-<h3>Hand Control</h3>
-<p>Native macOS hand-gesture control using Apple Vision, AVFoundation, and Accessibility APIs.</p>
-<p><b>Swift · Computer vision · macOS</b></p>
-<a href="https://github.com/ABRJrocks/hand-control">Explore the repository →</a>
+<a href="https://github.com/ABRJrocks/hand-control"><img width="100%" src="https://raw.githubusercontent.com/ABRJrocks/ABRJrocks/main/assets/project-hand-control.svg?v=3" alt="Hand Control: native macOS hand gestures using Apple Vision, AVFoundation, and accessibility." /></a>
+<p><a href="https://github.com/ABRJrocks/hand-control"><b>Explore Hand Control →</b></a> &nbsp; <sub>Public repository</sub></p>
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-<h3>ByrdDog / Procurement AI</h3>
-<p>Built AI workflow components for supplier-email classification, structured extraction, RFQ generation, reply matching, and downstream automation.</p>
-<p><b>AI workflows · Data extraction · Business systems</b></p>
-<a href="https://www.rafayai.dev/#ov-projects">View selected client work →</a>
+<a href="https://www.rafayai.dev/#ov-projects"><img width="100%" src="https://raw.githubusercontent.com/ABRJrocks/ABRJrocks/main/assets/project-byrddog.svg?v=3" alt="ByrdDog: AI components for supplier email classification, structured extraction, RFQ generation, and reply matching." /></a>
+<p><a href="https://www.rafayai.dev/#ov-projects"><b>View client engineering →</b></a> &nbsp; <sub>ByrdDog</sub></p>
 </td>
 <td width="50%" valign="top">
-<h3>Customer Support / RAG</h3>
-<p>Delivered live-data retrieval and grounded customer-support experiences across WhatsApp and web, with FastAPI services and a React frontend.</p>
-<p><b>Python · FastAPI · React · RAG</b></p>
-<a href="https://www.rafayai.dev/#ov-projects">View selected client work →</a>
+<a href="https://www.rafayai.dev/#ov-projects"><img width="100%" src="https://raw.githubusercontent.com/ABRJrocks/ABRJrocks/main/assets/project-rag.svg?v=3" alt="Customer Support AI: live-data RAG across WhatsApp and web, with FastAPI and React." /></a>
+<p><a href="https://www.rafayai.dev/#ov-projects"><b>View client engineering →</b></a> &nbsp; <sub>Customer support</sub></p>
 </td>
 </tr>
 </table>
 
-**More things I build:** [DevicesBattery](https://github.com/ABRJrocks/DevicesBattery), a macOS menu-bar app for Mac, AirPods, and iPhone battery levels; multimodal fashion assistants combining text, voice, and image input; real-time voice and receptionist workflows.
+**Also building:** [DevicesBattery](https://github.com/ABRJrocks/DevicesBattery), native battery monitoring for Mac, AirPods, and iPhone; multimodal fashion assistants; real-time voice and receptionist workflows.
 
-## The tools behind the work
+## Engineering in public
 
-| Area | Technologies & approach |
-| :--- | :--- |
-| **AI systems** | AI agents, RAG, LangGraph, LangChain, LLM orchestration, multimodal and voice AI |
-| **Backend & data** | Python, FastAPI, Django, Node.js, PostgreSQL, data ingestion and ETL |
-| **Product interfaces** | React, Next.js, TypeScript, React Native, Tailwind CSS |
-| **Native applications** | Swift, Apple Vision, AVFoundation, macOS Accessibility APIs |
-| **Delivery & leadership** | Docker, Linux, solution architecture, technical discovery, code reviews, developer mentoring |
+![Daily engineering dashboard: original public repositories, contributions, active days, followers, contribution calendar, and primary language distribution.](https://raw.githubusercontent.com/ABRJrocks/ABRJrocks/main/assets/github-metrics.svg?v=3)
 
-## Architecture. Ownership. Delivery.
+<sub>Updated daily from GitHub. Repository counts exclude forks and private work. Language mix measures repositories, not proficiency. [Inspect the data](https://github.com/ABRJrocks/ABRJrocks/blob/main/assets/github-metrics.json) · [View the refresh workflow](https://github.com/ABRJrocks/ABRJrocks/actions/workflows/profile-metrics.yml)</sub>
 
-At Dev Entities, I progressed from **Full-Stack AI Engineer → Lead AI Engineer → Head of AI & Technology Solutions**. I stay close to the code while shaping technical direction, reviewing implementations, mentoring developers, and aligning delivery with business goals.
+## From discovery to delivery
 
-Before that, I worked with React and Django at Echo Technologies and taught development, programming fundamentals, and data structures at Riphah International University. I started building apps at **14**, and still enjoy turning a rough idea into something useful.
+![How I take ownership: understand business goals, architect systems, build the product, and deliver through deployment and iteration.](https://raw.githubusercontent.com/ABRJrocks/ABRJrocks/main/assets/delivery-map.svg?v=3)
+
+I work with founders, clients, and engineering teams on technical discovery, architecture, scope, roadmaps, and implementation. I stay close to code, review systems, mentor developers, and plan delivery. My engineering priorities are **grounded answers, clear system boundaries, reliable fallbacks, and human review where it matters**.
+
+| AI & retrieval | Backend & data | Product & native | Delivery |
+| :--- | :--- | :--- | :--- |
+| LangGraph · LangChain | Python · FastAPI · Django | React · Next.js · TypeScript | Docker · Linux |
+| Agents · RAG · Voice AI | PostgreSQL · Ingestion · ETL | Swift · Apple Vision · AVFoundation | Architecture · Reviews · Mentoring |
+
+### Built through ownership
+
+| Full-Stack AI Engineer | Lead AI Engineer | Head of AI & Technology Solutions |
+| :--- | :--- | :--- |
+| Dev Entities · Jun 2024 | Dev Entities · Mar 2025 | Dev Entities · Sep 2026 |
+| AI features and product implementation | System design and engineering leadership | Technical direction and solution delivery |
+
+Earlier, I developed React and Django applications at **Echo Technologies** and taught programming, data structures, and development at **Riphah International University**.
 
 ---
 
-**Have an AI product or workflow to build?** I’m open to engineering leadership roles and consulting across AI agents, RAG, voice AI, and full-stack product delivery.
+### Let's turn a useful idea into a working product.
 
-[Explore my portfolio](https://www.rafayai.dev) · [Connect on LinkedIn](https://www.linkedin.com/in/abdul-rafay380/) · [Email me](mailto:abdul.rafay@deventities.com)
+Open to **engineering leadership and consulting** across AI agents, RAG, voice AI, and full-stack delivery.
+
+[Explore my work ↗](https://www.rafayai.dev) &nbsp; · &nbsp; [Connect on LinkedIn ↗](https://www.linkedin.com/in/abdul-rafay380/) &nbsp; · &nbsp; [Email me ↗](mailto:abdul.rafay@deventities.com)
