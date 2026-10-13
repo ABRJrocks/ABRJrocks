@@ -8,6 +8,8 @@
 
 I lead **AI & Technology Solutions at Dev Entities**, pairing technical direction with hands-on product engineering. My work connects **AI agents, retrieval systems, and voice experiences** with the APIs, interfaces, and infrastructure that make them useful in production.
 
+**New open-source tool:** [Webhook Drill](https://github.com/ABRJrocks/webhook-drill) tests webhook workflows with signed replay, concurrent duplicates, retries, and application-state assertions. [Try the first release](https://github.com/ABRJrocks/webhook-drill/releases/tag/v0.1.0) · [Read the integration guide](https://github.com/ABRJrocks/webhook-drill/blob/main/docs/integrations.md).
+
 ## Selected work
 
 A selection of public products and client engineering. Open-source repositories include the implementation; client projects link to my portfolio.
