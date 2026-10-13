@@ -1,0 +1,155 @@
+name: Refresh profile metrics
+
+on:
+  schedule:
+    - cron: '17 3 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/profile-metrics.yml']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-metrics
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate and validate profile assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          from collections import Counter
+          from datetime import datetime, timezone
+          from html import escape
+          from pathlib import Path
+          from urllib.request import Request, urlopen
+          from xml.etree import ElementTree
+          
+          LOGIN = 'ABRJrocks'
+          HEADERS = {'Authorization': 'Bearer ' + os.environ['GH_TOKEN'], 'User-Agent': 'ABRJrocks-profile', 'Accept': 'application/vnd.github+json'}
+          
+          def api(path, payload=None):
+              body = None if payload is None else json.dumps(payload).encode()
+              request = Request('https://api.github.com/' + path, data=body, headers=HEADERS)
+              with urlopen(request, timeout=30) as response:
+                  result = json.load(response)
+              if isinstance(result, dict) and result.get('errors'):
+                  raise RuntimeError('GitHub GraphQL query failed')
+              return result
+          
+          user = api('users/' + LOGIN)
+          repos = []
+          page = 1
+          while True:
+              batch = api(f'users/{LOGIN}/repos?type=owner&per_page=100&page={page}')
+              repos.extend(r for r in batch if not r['private'] and not r['fork'])
+              if len(batch) < 100:
+                  break
+              page += 1
+          
+          query = '''query($login: String!) {
+            user(login: $login) {
+              contributionsCollection {
+                totalCommitContributions totalPullRequestContributions
+                totalIssueContributions totalPullRequestReviewContributions
+                contributionCalendar {
+                  totalContributions
+                  weeks { contributionDays { date contributionCount contributionLevel } }
+                }
+              }
+            }
+          }'''
+          collection = api('graphql', {'query': query, 'variables': {'login': LOGIN}})['data']['user']['contributionsCollection']
+          calendar = collection['contributionCalendar']
+          languages = Counter(r['language'] for r in repos if r['language'])
+          assert all(r['owner']['login'].lower() == LOGIN.lower() for r in repos)
+          assert calendar['totalContributions'] == sum(d['contributionCount'] for w in calendar['weeks'] for d in w['contributionDays'])
+          assert sum(languages.values()) <= len(repos)
+          
+          stats = {
+              'public_original_repositories': len(repos),
+              'contributions_last_year': calendar['totalContributions'],
+              'stars_on_original_repositories': sum(r['stargazers_count'] for r in repos),
+              'forks_of_original_repositories': sum(r['forks_count'] for r in repos),
+              'followers': user['followers'],
+              'primary_languages': dict(languages.most_common()),
+              'updated_at': datetime.now(timezone.utc).strftime('%Y-%m-%d'),
+          }
+          
+          def text(x, y, value, size=16, color='#e8edf5', weight=400):
+              return f'<text x="{x}" y="{y}" font-family="Arial,Helvetica,sans-serif" font-size="{size}" font-weight="{weight}" fill="{color}">{escape(str(value))}</text>'
+          
+          def rect(x, y, width, height, color, radius=0):
+              return f'<rect x="{x}" y="{y}" width="{width}" height="{height}" rx="{radius}" fill="{color}"/>'
+          
+          def svg(height, title, parts):
+              return f'<svg xmlns="http://www.w3.org/2000/svg" width="960" height="{height}" viewBox="0 0 960 {height}" role="img" aria-labelledby="title"><title id="title">{escape(title)}</title>' + ''.join(parts) + '</svg>'
+          
+          hero = [rect(0, 0, 960, 280, '#101b2a', 16), rect(32, 38, 4, 206, '#45d6b0', 2),
+                  text(58, 54, 'AI ENGINEERING / PRODUCT / ARCHITECTURE', 12, '#45d6b0', 700),
+                  text(56, 113, 'Abdul Rafay', 52, weight=700),
+                  text(58, 157, 'I build AI that ships.', 30, '#c5d4e6', 600),
+                  text(58, 198, 'Head of AI & Technology Solutions', 17),
+                  text(58, 224, 'Dev Entities · From business problem to production product', 14, '#92a6bd')]
+          hero += ['<circle cx="812" cy="140" r="94" fill="none" stroke="#24384d" stroke-width="1"/>',
+                   '<circle cx="812" cy="140" r="63" fill="none" stroke="#45d6b0" stroke-opacity="0.4" stroke-width="1"/>',
+                   '<path d="M746 85L873 104L826 218Z" fill="none" stroke="#355974"/>']
+          for x, y, label in [(744, 81, 'AGENTS'), (874, 103, 'RAG'), (823, 222, 'VOICE')]:
+              hero += [rect(x-39, y-14, 78, 28, '#1b3043', 14), text(x-28, y+4, label, 11, '#73e4c5', 700)]
+          hero += [text(783, 145, 'BUILD', 17, '#e8edf5', 700)]
+          
+          parts = [rect(0, 0, 960, 460, '#101b2a', 16), text(32, 36, 'ENGINEERING IN PUBLIC', 13, '#45d6b0', 700),
+                   text(730, 36, 'Updated ' + stats['updated_at'] + ' UTC', 12, '#92a6bd')]
+          metrics = [('Original public repos', stats['public_original_repositories']),
+                     ('Contributions / last year', stats['contributions_last_year']),
+                     ('Stars earned', stats['stars_on_original_repositories']),
+                     ('Forks by the community', stats['forks_of_original_repositories']),
+                     ('GitHub followers', stats['followers']),
+                     ('Primary languages', len(languages))]
+          for index, (label, value) in enumerate(metrics):
+              x = 32 + (index % 3) * 308
+              y = 60 + (index // 3) * 78
+              parts += [rect(x, y, 280, 68, '#192a3c', 8), text(x+16, y+33, f'{value:,}', 29, weight=700), text(x+16, y+55, label, 12, '#a8b9cb')]
+          parts += [text(32, 244, 'A YEAR OF BUILDING', 12, '#a8b9cb', 700)]
+          levels = {'NONE': '#213246', 'FIRST_QUARTILE': '#185c55', 'SECOND_QUARTILE': '#228b79', 'THIRD_QUARTILE': '#35b999', 'FOURTH_QUARTILE': '#66e5bf'}
+          for week_index, week in enumerate(calendar['weeks']):
+              for day_index, day in enumerate(week['contributionDays']):
+                  x, y = 32 + week_index * 16.5, 260 + day_index * 15
+                  parts += [f'<g><title>{day["date"]}: {day["contributionCount"]} contributions</title>', rect(x, y, 13, 12, levels[day['contributionLevel']], 2), '</g>']
+          parts += [text(32, 391, 'LANGUAGES ACROSS ORIGINAL PUBLIC REPOSITORIES', 11, '#a8b9cb', 700)]
+          colors = ['#45d6b0', '#75b8ff', '#d0abff', '#ffc784', '#f18fa6']
+          for index, (language, count) in enumerate(languages.most_common(5)):
+              x = 32 + index * 180
+              parts += [rect(x, 408, 8, 8, colors[index], 4), text(x+14, 418, f'{language} · {count} repos', 12)]
+          parts += [text(32, 445, 'Source: GitHub. Repo / star / fork counts exclude forks. Languages count repos, not lines of code.', 11, '#92a6bd')]
+          
+          out = Path('assets')
+          out.mkdir(exist_ok=True)
+          for name, content in [('profile-header.svg', svg(280, 'Abdul Rafay — AI engineering, product and architecture', hero)),
+                                ('github-metrics.svg', svg(460, 'Daily GitHub metrics and contribution calendar for Abdul Rafay', parts))]:
+              ElementTree.fromstring(content)
+              assert '<script' not in content and '<foreignObject' not in content
+              (out / name).write_text(content + '\n')
+          (out / 'github-metrics.json').write_text(json.dumps(stats, indent=2) + '\n')
+          Path('.profile-author-email').write_text(f"{user['id']}+{LOGIN}@users.noreply.github.com")
+          print(json.dumps(stats, indent=2))
+          PY
+      - name: Publish refreshed assets
+        run: |
+          git config user.name 'Abdul Rafay'
+          git config user.email "$(cat .profile-author-email)"
+          git add assets/profile-header.svg assets/github-metrics.svg assets/github-metrics.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Refresh public GitHub metrics"
+          git pull --rebase origin main
+          git push origin HEAD:main
