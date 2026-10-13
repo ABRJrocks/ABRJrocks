@@ -1,4 +1,4 @@
-![Abdul Rafay — AI engineering, product and architecture](https://raw.githubusercontent.com/ABRJrocks/ABRJrocks/main/assets/profile-header.svg)
+![Abdul Rafay | AI engineering, product and architecture](https://raw.githubusercontent.com/ABRJrocks/ABRJrocks/main/assets/profile-header.svg)
 
 <p align="center">
   <a href="https://www.rafayai.dev"><b>Portfolio & case studies</b></a> &nbsp; / &nbsp;
@@ -8,7 +8,7 @@
 
 ### From an ambiguous problem to a product people can use.
 
-I lead **AI & Technology Solutions at Dev Entities**, combining solution architecture with hands-on engineering. I build AI agents, retrieval systems, voice assistants, and full-stack products—and take them through APIs, interfaces, deployment, and iteration.
+I lead **AI & Technology Solutions at Dev Entities**, combining solution architecture with hands-on engineering. I build AI agents, retrieval systems, voice assistants, and full-stack products. I take them through APIs, interfaces, deployment, and iteration.
 
 My focus is practical: grounded answers, clear system boundaries, human review where it matters, and reliable fallbacks. I work with founders and engineering teams across **AI, web, mobile, SaaS, and automation**.
 
@@ -67,7 +67,7 @@ My focus is practical: grounded answers, clear system boundaries, human review w
 
 At Dev Entities, I progressed from **Full-Stack AI Engineer → Lead AI Engineer → Head of AI & Technology Solutions**. I stay close to the code while shaping technical direction, reviewing implementations, mentoring developers, and aligning delivery with business goals.
 
-Before that, I worked with React and Django at Echo Technologies and taught development, programming fundamentals, and data structures at Riphah International University. I started building apps at **14**—and still enjoy turning a rough idea into something useful.
+Before that, I worked with React and Django at Echo Technologies and taught development, programming fundamentals, and data structures at Riphah International University. I started building apps at **14**, and still enjoy turning a rough idea into something useful.
 
 ---
 
