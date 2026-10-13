@@ -135,9 +135,10 @@ jobs:
           
           out = Path('assets')
           out.mkdir(exist_ok=True)
-          for name, content in [('profile-header.svg', svg(280, 'Abdul Rafay — AI engineering, product and architecture', hero)),
+          for name, content in [('profile-header.svg', svg(280, 'Abdul Rafay | AI engineering, product and architecture', hero)),
                                 ('github-metrics.svg', svg(460, 'Daily GitHub metrics and contribution calendar for Abdul Rafay', parts))]:
               ElementTree.fromstring(content)
+              assert '\u2014' not in content
               assert '<script' not in content and '<foreignObject' not in content
               (out / name).write_text(content + '\n')
           (out / 'github-metrics.json').write_text(json.dumps(stats, indent=2) + '\n')
