@@ -1,4 +1,4 @@
-![Abdul Rafay | AI engineering, product and architecture](https://raw.githubusercontent.com/ABRJrocks/ABRJrocks/main/assets/profile-header.svg)
+![Abdul Rafay | AI engineering, product and architecture](https://raw.githubusercontent.com/ABRJrocks/ABRJrocks/main/assets/profile-header.svg?v=2)
 
 <p align="center">
   <a href="https://www.rafayai.dev"><b>Portfolio & case studies</b></a> &nbsp; / &nbsp;
@@ -14,7 +14,7 @@ My focus is practical: grounded answers, clear system boundaries, human review w
 
 ## Engineering in public
 
-![Daily GitHub metrics: original public repositories, contributions, stars, forks, followers, languages, and contribution heatmap](https://raw.githubusercontent.com/ABRJrocks/ABRJrocks/main/assets/github-metrics.svg)
+![Daily GitHub metrics: original public repositories, contributions, active days, followers, languages, and contribution heatmap](https://raw.githubusercontent.com/ABRJrocks/ABRJrocks/main/assets/github-metrics.svg?v=2)
 
 <sub>Refreshed daily from GitHub. Repository, star, and fork counts cover original public repositories; client and private work are represented in the case studies below. Language counts describe repositories, not proficiency. [View the data](https://github.com/ABRJrocks/ABRJrocks/blob/main/assets/github-metrics.json) · [Refresh workflow](https://github.com/ABRJrocks/ABRJrocks/actions/workflows/profile-metrics.yml)</sub>
 
