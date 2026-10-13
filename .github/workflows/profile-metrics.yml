@@ -82,6 +82,8 @@ jobs:
               'stars_on_original_repositories': sum(r['stargazers_count'] for r in repos),
               'forks_of_original_repositories': sum(r['forks_count'] for r in repos),
               'followers': user['followers'],
+              'github_since': int(user['created_at'][:4]),
+              'active_contribution_days_last_year': sum(d['contributionCount'] > 0 for w in calendar['weeks'] for d in w['contributionDays']),
               'primary_languages': dict(languages.most_common()),
               'updated_at': datetime.now(timezone.utc).strftime('%Y-%m-%d'),
           }
@@ -112,14 +114,14 @@ jobs:
                    text(730, 36, 'Updated ' + stats['updated_at'] + ' UTC', 12, '#92a6bd')]
           metrics = [('Original public repos', stats['public_original_repositories']),
                      ('Contributions / last year', stats['contributions_last_year']),
-                     ('Stars earned', stats['stars_on_original_repositories']),
-                     ('Forks by the community', stats['forks_of_original_repositories']),
+                     ('Primary languages', len(languages)),
+                     ('Active days / last year', stats['active_contribution_days_last_year']),
                      ('GitHub followers', stats['followers']),
-                     ('Primary languages', len(languages))]
+                     ('On GitHub since', stats['github_since'])]
           for index, (label, value) in enumerate(metrics):
               x = 32 + (index % 3) * 308
               y = 60 + (index // 3) * 78
-              parts += [rect(x, y, 280, 68, '#192a3c', 8), text(x+16, y+33, f'{value:,}', 29, weight=700), text(x+16, y+55, label, 12, '#a8b9cb')]
+              parts += [rect(x, y, 280, 68, '#192a3c', 8), text(x+16, y+33, str(value) if label == 'On GitHub since' else f'{value:,}', 29, weight=700), text(x+16, y+55, label, 12, '#a8b9cb')]
           parts += [text(32, 244, 'A YEAR OF BUILDING', 12, '#a8b9cb', 700)]
           levels = {'NONE': '#213246', 'FIRST_QUARTILE': '#185c55', 'SECOND_QUARTILE': '#228b79', 'THIRD_QUARTILE': '#35b999', 'FOURTH_QUARTILE': '#66e5bf'}
           for week_index, week in enumerate(calendar['weeks']):
