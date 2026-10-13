@@ -97,48 +97,100 @@ jobs:
           def svg(height, title, parts):
               return f'<svg xmlns="http://www.w3.org/2000/svg" width="960" height="{height}" viewBox="0 0 960 {height}" role="img" aria-labelledby="title"><title id="title">{escape(title)}</title>' + ''.join(parts) + '</svg>'
           
-          hero = [rect(0, 0, 960, 280, '#101b2a', 16), rect(32, 38, 4, 206, '#45d6b0', 2),
-                  text(58, 54, 'AI ENGINEERING / PRODUCT / ARCHITECTURE', 12, '#45d6b0', 700),
-                  text(56, 113, 'Abdul Rafay', 52, weight=700),
-                  text(58, 157, 'I build AI that ships.', 30, '#c5d4e6', 600),
-                  text(58, 198, 'Head of AI & Technology Solutions', 17),
-                  text(58, 224, 'Dev Entities · From business problem to production product', 14, '#92a6bd')]
-          hero += ['<circle cx="812" cy="140" r="94" fill="none" stroke="#24384d" stroke-width="1"/>',
-                   '<circle cx="812" cy="140" r="63" fill="none" stroke="#45d6b0" stroke-opacity="0.4" stroke-width="1"/>',
-                   '<path d="M746 85L873 104L826 218Z" fill="none" stroke="#355974"/>']
-          for x, y, label in [(744, 81, 'AGENTS'), (874, 103, 'RAG'), (823, 222, 'VOICE')]:
-              hero += [rect(x-39, y-14, 78, 28, '#1b3043', 14), text(x-28, y+4, label, 11, '#73e4c5', 700)]
-          hero += [text(783, 145, 'BUILD', 17, '#e8edf5', 700)]
-          
-          parts = [rect(0, 0, 960, 460, '#101b2a', 16), text(32, 36, 'ENGINEERING IN PUBLIC', 13, '#45d6b0', 700),
-                   text(730, 36, 'Updated ' + stats['updated_at'] + ' UTC', 12, '#92a6bd')]
-          metrics = [('Original public repos', stats['public_original_repositories']),
-                     ('Contributions / last year', stats['contributions_last_year']),
-                     ('Primary languages', len(languages)),
-                     ('Active days / last year', stats['active_contribution_days_last_year']),
-                     ('GitHub followers', stats['followers']),
-                     ('On GitHub since', stats['github_since'])]
-          for index, (label, value) in enumerate(metrics):
-              x = 32 + (index % 3) * 308
-              y = 60 + (index // 3) * 78
-              parts += [rect(x, y, 280, 68, '#192a3c', 8), text(x+16, y+33, str(value) if label == 'On GitHub since' else f'{value:,}', 29, weight=700), text(x+16, y+55, label, 12, '#a8b9cb')]
-          parts += [text(32, 244, 'A YEAR OF BUILDING', 12, '#a8b9cb', 700)]
-          levels = {'NONE': '#213246', 'FIRST_QUARTILE': '#185c55', 'SECOND_QUARTILE': '#228b79', 'THIRD_QUARTILE': '#35b999', 'FOURTH_QUARTILE': '#66e5bf'}
+          INK, PANEL, WHITE, MUTED, ACCENT, LINE = '#171918', '#232624', '#f3f0e8', '#b2b8b1', '#e4bd77', '#3a403a'
+
+          def line(x1, y1, x2, y2, color=LINE):
+              return f'<path d="M{x1} {y1}H{x2}" stroke="{color}"/>' if y1 == y2 else f'<path d="M{x1} {y1}L{x2} {y2}" stroke="{color}"/>'
+
+          hero = [rect(0, 0, 960, 350, INK, 12), rect(0, 0, 8, 350, ACCENT),
+                  text(38, 40, 'ABDUL RAFAY / ENGINEERING & TECHNOLOGY', 12, ACCENT, 700),
+                  text(38, 113, 'Abdul Rafay', 64, WHITE, 700),
+                  text(38, 166, 'Engineering useful AI.', 35, WHITE, 600),
+                  text(40, 205, 'From business problem to production product.', 17, MUTED),
+                  line(40, 232, 574, 232),
+                  text(40, 264, 'HEAD OF AI & TECHNOLOGY SOLUTIONS', 13, ACCENT, 700),
+                  text(40, 289, 'Dev Entities', 18, WHITE, 600),
+                  text(40, 326, 'AI SYSTEMS  /  FULL-STACK PRODUCTS  /  TECHNICAL LEADERSHIP', 11, MUTED, 700),
+                  line(630, 34, 630, 318)]
+          for index, (label, detail) in enumerate([('AI systems', 'Agents · RAG · Voice'), ('Product engineering', 'APIs · Interfaces · Native apps'), ('Technical leadership', 'Architecture · Teams · Delivery')]):
+              y = 63 + index * 96
+              hero += [text(664, y, '0' + str(index+1), 13, ACCENT, 700),
+                       text(704, y, label, 19, WHITE, 600), text(704, y+26, detail, 12, MUTED)]
+              if index < 2:
+                  hero += [line(664, y+49, 918, y+49)]
+
+          dashboard_height = 486 + max(0, (len(languages) + 3) // 4 - 2) * 22
+          parts = [rect(0, 0, 960, dashboard_height, INK, 12), text(32, 35, 'ENGINEERING IN PUBLIC', 12, ACCENT, 700),
+                   text(735, 35, stats['updated_at'] + ' / UTC', 12, MUTED)]
+          for index, (label, value) in enumerate([('ORIGINAL PUBLIC REPOS', len(repos)), ('CONTRIBUTIONS / LAST YEAR', calendar['totalContributions']), ('ACTIVE DAYS / LAST YEAR', stats['active_contribution_days_last_year'])]):
+              x = 32 + index * 307
+              parts += [text(x, 105, f'{value:,}', 52, WHITE, 700), text(x, 131, label, 11, MUTED, 700)]
+              if index < 2:
+                  parts += [line(x+279, 62, x+279, 136)]
+          parts += [line(32, 155, 928, 155),
+                    text(32, 182, f'{len(languages)} primary languages', 14, WHITE, 600),
+                    text(346, 182, f'{user["followers"]} GitHub followers', 14, WHITE, 600),
+                    text(663, 182, f'Building on GitHub since {stats["github_since"]}', 14, WHITE, 600),
+                    text(32, 223, 'A YEAR OF BUILDING', 11, ACCENT, 700)]
+          levels = {'NONE': '#303530', 'FIRST_QUARTILE': '#5e563e', 'SECOND_QUARTILE': '#97804e', 'THIRD_QUARTILE': '#c29e60', 'FOURTH_QUARTILE': ACCENT}
           for week_index, week in enumerate(calendar['weeks']):
               for day_index, day in enumerate(week['contributionDays']):
-                  x, y = 32 + week_index * 16.5, 260 + day_index * 15
+                  weekday = (datetime.strptime(day['date'], '%Y-%m-%d').weekday() + 1) % 7
+                  x, y = 32 + week_index * 16.5, 240 + weekday * 15
                   parts += [f'<g><title>{day["date"]}: {day["contributionCount"]} contributions</title>', rect(x, y, 13, 12, levels[day['contributionLevel']], 2), '</g>']
-          parts += [text(32, 391, 'LANGUAGES ACROSS ORIGINAL PUBLIC REPOSITORIES', 11, '#a8b9cb', 700)]
-          colors = ['#45d6b0', '#75b8ff', '#d0abff', '#ffc784', '#f18fa6']
-          for index, (language, count) in enumerate(languages.most_common(5)):
-              x = 32 + index * 180
-              parts += [rect(x, 408, 8, 8, colors[index], 4), text(x+14, 418, f'{language} · {count} repos', 12)]
-          parts += [text(32, 445, 'Source: GitHub. Repo / star / fork counts exclude forks. Languages count repos, not lines of code.', 11, '#92a6bd')]
-          
+          parts += [text(32, 371, 'PRIMARY LANGUAGE MIX / ORIGINAL PUBLIC REPOSITORIES', 11, ACCENT, 700)]
+          colors = ['#e4bd77', '#8eada5', '#b9a0c4', '#b7c78c', '#cf9685', '#89a9bc', '#c7c0aa', '#a3a9a1']
+          offset = 32
+          total = sum(languages.values())
+          for index, (language, count) in enumerate(languages.most_common()):
+              width = 896 * count / max(total, 1)
+              parts += [f'<g><title>{escape(language)}: {count} repositories</title>', rect(offset, 385, width, 12, colors[index % len(colors)]), '</g>']
+              offset += width
+              x, y = 32 + (index % 4) * 224, 423 + (index // 4) * 22
+              parts += [rect(x, y-8, 7, 7, colors[index % len(colors)], 2), text(x+13, y, f'{language} / {count}', 12, MUTED)]
+          parts += [text(32, dashboard_height-12, 'GitHub API · Daily refresh · Original public repos only · Language mix counts repos, not proficiency', 10, MUTED)]
+
+          def project_card(number, category, name, diagram, description, stack):
+              p = [rect(0, 0, 468, 294, INK, 10), text(24, 30, category, 10, ACCENT, 700),
+                   text(415, 30, number, 13, MUTED), text(24, 72, name, 28, WHITE, 700),
+                   rect(24, 94, 420, 86, PANEL, 6)]
+              if number == '01':
+                  for index, height in enumerate([8, 16, 30, 46, 24, 54, 36, 18, 44, 58, 34, 20, 42, 26, 12, 32, 48, 24, 14, 8]):
+                      p += [rect(43+index*8, 137-height/2, 4, height, ACCENT, 2)]
+                  p += [line(216, 137, 240, 137, ACCENT), text(254, 131, 'VOICE TO TEXT', 11, WHITE, 700), text(254, 152, 'On your Mac', 12, MUTED)]
+              elif number == '02':
+                  p += ['<path d="M62 159V129Q62 122 69 124L78 131V111Q78 103 85 108L94 124V106Q94 99 101 103L111 126V116Q111 108 118 114L130 139Q136 159 119 164H79Z" fill="none" stroke="#e4bd77" stroke-width="2" stroke-linejoin="round"/>',
+                        line(159, 137, 197, 137, ACCENT), text(219, 130, 'VISION TO CONTROL', 11, WHITE, 700), text(219, 152, 'Native macOS gestures', 12, MUTED)]
+              else:
+                  for index, label in enumerate(diagram):
+                      x = 38 + index * 137
+                      p += [rect(x, 116, 119, 43, INK, 5), text(x+12, 142, label, 11, WHITE, 600)]
+                      if index < 2:
+                          p += [line(x+121, 137, x+134, 137, ACCENT)]
+              for index, value in enumerate(description):
+                  p += [text(24, 211+index*22, value, 14, WHITE)]
+              p += [line(24, 254, 444, 254), text(24, 278, stack, 11, MUTED, 600)]
+              return svg(294, name + ': ' + ' '.join(description), p).replace('width="960"', 'width="468"').replace('viewBox="0 0 960', 'viewBox="0 0 468')
+
+          cards = {
+              'project-flowlocal.svg': project_card('01', 'OPEN SOURCE / ON-DEVICE AI', 'FlowLocal', [], ['Push-to-talk dictation. Three local ASR engines.', 'On-device LLM cleanup. Zero cloud.'], 'SWIFT  /  SPEECH AI  /  MACOS'),
+              'project-hand-control.svg': project_card('02', 'OPEN SOURCE / COMPUTER VISION', 'Hand Control', [], ['Control your Mac with hand gestures.', 'Apple Vision, camera capture, and accessibility.'], 'SWIFT  /  APPLE VISION  /  AVFOUNDATION'),
+              'project-byrddog.svg': project_card('03', 'CLIENT WORK / WORKFLOW AUTOMATION', 'ByrdDog', ['Supplier email', 'Structured data', 'RFQ workflow'], ['AI components for procurement workflows.', 'Email classification, extraction, and reply matching.'], 'AI WORKFLOWS  /  EXTRACTION  /  AUTOMATION'),
+              'project-rag.svg': project_card('04', 'CLIENT WORK / RETRIEVAL SYSTEMS', 'Customer Support AI', ['Live data', 'Retrieval', 'Grounded reply'], ['Live-data RAG across WhatsApp and web.', 'FastAPI services with a React frontend.'], 'PYTHON  /  FASTAPI  /  REACT  /  RAG'),
+          }
+          delivery = [rect(0, 0, 960, 166, INK, 10), text(32, 32, 'HOW I TAKE OWNERSHIP', 11, ACCENT, 700)]
+          for index, (title, detail) in enumerate([('Understand', 'Discovery & business goals'), ('Architect', 'Systems, scope & roadmap'), ('Build', 'AI, APIs & product interfaces'), ('Deliver', 'Deployment, review & iteration')]):
+              x = 32 + index * 232
+              delivery += [text(x, 70, '0' + str(index+1), 13, ACCENT, 700), text(x, 100, title, 24, WHITE, 600), text(x, 127, detail, 12, MUTED)]
+              if index < 3:
+                  delivery += [line(x+186, 89, x+213, 89)]
+
           out = Path('assets')
           out.mkdir(exist_ok=True)
-          for name, content in [('profile-header.svg', svg(280, 'Abdul Rafay | AI engineering, product and architecture', hero)),
-                                ('github-metrics.svg', svg(460, 'Daily GitHub metrics and contribution calendar for Abdul Rafay', parts))]:
+          assets = {'profile-header.svg': svg(350, 'Abdul Rafay, Head of AI & Technology Solutions at Dev Entities. Engineering useful AI.', hero),
+                    'github-metrics.svg': svg(dashboard_height, 'Daily GitHub metrics and contribution calendar for Abdul Rafay', parts),
+                    'delivery-map.svg': svg(166, 'Understand, architect, build, deliver: discovery through production', delivery), **cards}
+          for name, content in assets.items():
               ElementTree.fromstring(content)
               assert '\u2014' not in content
               assert '<script' not in content and '<foreignObject' not in content
@@ -151,7 +203,7 @@ jobs:
         run: |
           git config user.name 'Abdul Rafay'
           git config user.email "$(cat .profile-author-email)"
-          git add assets/profile-header.svg assets/github-metrics.svg assets/github-metrics.json
+          git add assets/profile-header.svg assets/github-metrics.svg assets/github-metrics.json assets/delivery-map.svg assets/project-*.svg
           if git diff --cached --quiet; then exit 0; fi
           git commit -m "Refresh public GitHub metrics"
           git pull --rebase origin main
