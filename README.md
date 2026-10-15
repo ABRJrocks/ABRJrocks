@@ -12,6 +12,7 @@ I lead **AI & Technology Solutions at Dev Entities**, pairing technical directio
 
 | Tool | Workflow |
 | --- | --- |
+| [RelayLedger](https://github.com/ABRJrocks/relayledger) | SQLite transactional outbox with signed HTTP delivery, crash recovery and receiver deduplication. [Integration guide](https://github.com/ABRJrocks/relayledger/blob/main/docs/integrations.md). |
 | [SpanVerdict](https://github.com/ABRJrocks/spanverdict) | Agent release checks from OpenTelemetry traces: tool ordering, telemetry coverage, token budgets and per-case regressions. [Integration guide](https://github.com/ABRJrocks/spanverdict/blob/main/docs/integrations.md). |
 | [BatchGate](https://github.com/ABRJrocks/batchgate) | CSV and JSONL import gates with contracts, duplicate checks, cross-file references, and decimal reconciliation. [Integration guide](https://github.com/ABRJrocks/batchgate/blob/main/docs/integrations.md). |
 | [Webhook Drill](https://github.com/ABRJrocks/webhook-drill) | Webhook reliability tests with signed replay, concurrent duplicates, retries, and application-state assertions. [Integration guide](https://github.com/ABRJrocks/webhook-drill/blob/main/docs/integrations.md). |
