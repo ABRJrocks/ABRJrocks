@@ -12,6 +12,7 @@ I lead **AI & Technology Solutions at Dev Entities**, pairing technical directio
 
 | Tool | Workflow |
 | --- | --- |
+| [HarborIndex](https://github.com/ABRJrocks/harborindex) | Embedded hybrid retrieval with SQLite BM25, supplied embeddings and explainable rank fusion. [Ranking inspector](https://abrjrocks.github.io/harborindex/) · [Integration guide](https://github.com/ABRJrocks/harborindex/blob/main/docs/integration.md). |
 | [Cutover Desk](https://github.com/ABRJrocks/cutover-desk) | Visual deployment and migration rehearsals with dependency planning, critical paths and portable evidence reports. [Live workbench](https://abrjrocks.github.io/cutover-desk/). |
 | [RelayLedger](https://github.com/ABRJrocks/relayledger) | SQLite transactional outbox with signed HTTP delivery, crash recovery and receiver deduplication. [Integration guide](https://github.com/ABRJrocks/relayledger/blob/main/docs/integrations.md). |
 | [SpanVerdict](https://github.com/ABRJrocks/spanverdict) | Agent release checks from OpenTelemetry traces: tool ordering, telemetry coverage, token budgets and per-case regressions. [Integration guide](https://github.com/ABRJrocks/spanverdict/blob/main/docs/integrations.md). |
