@@ -12,7 +12,7 @@ I lead **AI & Technology Solutions at Dev Entities**, pairing technical directio
 
 | Tool | Workflow |
 | --- | --- |
-| [QuotaHold](https://github.com/ABRJrocks/quotahold) | Durable usage reservations for local AI/API workers, with replay protection and explicit unknown-call recovery. [Policy playground](https://abrjrocks.github.io/quotahold/) · [Integration guide](https://github.com/ABRJrocks/quotahold/blob/main/docs/integration.md). |
+| [QuotaHold](https://github.com/ABRJrocks/quotahold) | Durable usage reservations for local AI/API workers, with replay protection and explicit unknown-call recovery. [Offline playground](https://github.com/ABRJrocks/quotahold/releases/download/v0.1.0/quotahold-playground.html) · [Integration guide](https://github.com/ABRJrocks/quotahold/blob/main/docs/integration.md). |
 | [HarborIndex](https://github.com/ABRJrocks/harborindex) | Embedded hybrid retrieval with SQLite BM25, supplied embeddings and explainable rank fusion. [Ranking inspector](https://abrjrocks.github.io/harborindex/) · [Integration guide](https://github.com/ABRJrocks/harborindex/blob/main/docs/integration.md). |
 | [Cutover Desk](https://github.com/ABRJrocks/cutover-desk) | Visual deployment and migration rehearsals with dependency planning, critical paths and portable evidence reports. [Live workbench](https://abrjrocks.github.io/cutover-desk/). |
 | [RelayLedger](https://github.com/ABRJrocks/relayledger) | SQLite transactional outbox with signed HTTP delivery, crash recovery and receiver deduplication. [Integration guide](https://github.com/ABRJrocks/relayledger/blob/main/docs/integrations.md). |
